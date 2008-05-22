@@ -1,10 +1,10 @@
-#summary One-sentence summary of this page.
+#summary The Channel Model
 
 == Add to Project ==
 
 You can have different channel models to wrap your own additional functionality and business logic.
 
-To add a channel::
+To add a channel:
 
 {{{
   script/generate voice_model channel MyChannelName
