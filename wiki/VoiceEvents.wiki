@@ -18,7 +18,7 @@ Run with
   script/voice_events
 }}}
 
-You can also daemonize just like VoiceViews
+You can also daemonize just like VoiceView
 
 {{{
   script/voice_events -a start -d
