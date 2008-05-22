@@ -1,0 +1,59 @@
+#summary One-sentence summary of this page.
+
+== Add to Project ==
+
+You can have different channel models to wrap your own additional functionality and business logic.
+
+To add a channel::
+
+{{{
+  script/generate voice_model channel MyChannelName
+}}}
+
+This will generate app/models/my_channel_name.rb
+
+= Available Functions =
+
+== Class Methods ==
+ 
+=== create(opts = {}) ===
+  
+Create can take various.
+  * :destination (required) - The destination of the channel you would like to create.  Examples include: "sofia/default/1000" or "sofia/gateways/my_gateway/18001231234"
+  * :callback - A URL to call a voice_view at when the destination is answered.  For example: :callback => url_for(:action=>:connect).  If callback is specified then :params is ignored.
+  * :vars - variables to set on the channel.  Example: :vars=>{:hold_music=>'something'}
+  * :cid_number - caller id number
+  * :cid_name - caller id name
+  * :params - used if callback is not set.  Everything after the destination in the normal freeswitch originate syntax.
+
+Examples:
+{{{
+  MyChannel.create(:destination=>'sofia/default/1000', :callback=>url_for(:action=>:connect))
+}}}
+
+=== find ===
+
+Find all the channels or one specific channel.  Either takes :all as option or the uuid of the channel.  Examples:
+
+{{{
+  MyChannel.find(:all) #Returns an array of my_channel objects for each channel found
+}}}
+{{{
+  MyChannel.find(uuid) #Returns my channel object for uuid or nil if not found
+}}}
+
+=== humanize_error_code ===
+
+Humanizes FreeSWITCH error codes.  Examples:
+
+{{{
+  MyChannel.humanize_error_code 'USER_BUSY'
+}}}
+
+== Instance Methods ==
+
+ 
+Add your content here.  Format your content with:
+  * Text in *bold* or _italic_
+  * Headings, paragraphs, and lists
+  * Automatic links to other wiki pages
