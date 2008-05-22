@@ -13,6 +13,6 @@ Telegraph Abstracts the Rails Integration from the FreeSWITCH socket libraries. 
 
 As always..please contribute back!
 
-- Other VoIP Servers =
+= Other VoIP Servers =
 
 Telegraph is now architected so that it can be easily used with other VoIP servers.  Take a look or contact the dev if you are interested (we hope that someone will migrate the original telegraph asterisk servers to eventmachine and our new architecture...)
