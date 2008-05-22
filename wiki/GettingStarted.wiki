@@ -1,0 +1,9 @@
+#summary Getting Telegraph Up and Running..
+
+Getting Telegraph up and running is fairly easy.
+
+  # Install FreeSWITCH.  See http://wiki.freeswitch.org/wiki/Installation_Guide
+  # cd into your rails project directory.
+  # Run {{{ script/plugins install http://svn.freeswitch.org/... }}}
+  # Modify RAILS_ROOT/config/telegraph.yml (the default config will usually work).
+  # What do you want to do?  Check out VoiceModel, VoiceView or VoiceEvents for next steps.
