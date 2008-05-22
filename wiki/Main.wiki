@@ -1,0 +1,14 @@
+#Welcome to the Telegraph Documentation- What Lies Between Voice and Rails
+
+== Introduction ==
+
+Telegraph is a Ruby on Rails plugin that provides robust support for adding "voice" to your Rails application with FreeSWITCH.
+
+
+== Details ==
+
+  * Getting Started With Telegraph
+  * Understanding How Telegraph Works
+  * VoiceModel
+  * VoiceView
+  * VoiceEvents
