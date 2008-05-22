@@ -21,3 +21,4 @@ See these pages for more details:
   * VoiceModel
   * VoiceView
   * VoiceEvents
+  * Using the ruby libraries WithoutRails
