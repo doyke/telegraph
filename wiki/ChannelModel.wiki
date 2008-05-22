@@ -16,7 +16,7 @@ This will generate app/models/my_channel_name.rb
 
 == Class Methods ==
  
-=== create(opts = {}) ===
+=== create ===
   
 Create can take various.
   * :destination (required) - The destination of the channel you would like to create.  Examples include: "sofia/default/1000" or "sofia/gateways/my_gateway/18001231234"
@@ -52,7 +52,47 @@ Humanizes FreeSWITCH error codes.  Examples:
 
 == Instance Methods ==
 
- 
+=== destroy ===
+Hangups up channel.  Example:
+
+{{{
+  MyChannel.find(:all).first.destroy #Hangs up first channel
+}}}
+
+=== park/hold ===
+Park or hold a channel.  Example:
+
+{{{
+  channel = MyChannel.find(:all).first #Get first channel
+  channel.park #Park Channel
+  channel.hold #Hold channel
+}}}
+
+=== recordings ===
+Start/Stop Recording on Channel
+
+{{{
+  channel = MyChannel.find(:all).first #Get first channel
+  channel.start_recording('/tmp/filename.wav')
+  channel.stop_recording('/tmp/filename.wav')
+}}}
+
+=== variables ===
+Any channel variables can be accessed simply by:
+
+{{{
+  channel = MyChannel.find(:all).first #Get first channel
+  puts channel.some_channel_variable #puts some_channel_variable
+}}}
+
+=== inline transfer ===
+Transfer channel to another app
+
+{{{
+  channel = MyChannel.find(:all).first #Get first channel
+  channel.inline_transfer "bridge:sofia/default/1001"
+}}}
+
 Add your content here.  Format your content with:
   * Text in *bold* or _italic_
   * Headings, paragraphs, and lists
