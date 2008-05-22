@@ -39,6 +39,28 @@ voice.set "ringback=%(2000, 4000, 440.0, 480.0)"
 voice.bridge params[:call_me]
 }}}
 
+=== Running ===
+
+You have to run a separate rails server to listen for socket connections.  Simply do the following
+
+{{{
+ script/voice_view
+}}}
+
+Make sure voice_view has permission to execute.
+
+You can also daemonize with the following
+
+{{{
+  script/voice_view -a start -d
+}}}
+and
+{{{
+  script/voice_view -a stop
+}}}
+
+See -h for more options.
+
 === Voice View Functions ===
 
 Not all of the freeswitch socket functions have been implemented.  They are easy to add.  Please contribute..here are some that have been implemented:
