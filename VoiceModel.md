@@ -1,0 +1,12 @@
+# Introduction #
+
+Telegraph currently has three voice models.  More can easily be created to wrap FreeSWITCH XML-RPC functionality (please contribute back!)
+
+# The Models #
+
+| ChannelModel | For creating and manipulating channels.  Probably the most often used. |
+|:-------------|:-----------------------------------------------------------------------|
+| ConferenceModel | For finding/editing/creating conferences and conference members |
+| SipModel | For dealing with sip profiles |
+
+Click on the link of each model for more information.
